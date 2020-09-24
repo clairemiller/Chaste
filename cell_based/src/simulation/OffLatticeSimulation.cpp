@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2005-2018, University of Oxford.
+Copyright (c) 2005-2020, University of Oxford.
 All rights reserved.
 
 University of Oxford means the Chancellor, Masters and Scholars of the
@@ -133,7 +133,7 @@ void OffLatticeSimulation<ELEMENT_DIM,SPACE_DIM>::UpdateCellLocationsAndTopology
             {
                 ///\todo #2087 Make this a settable member variable
                 double timestep_increase = 0.01;
-                present_time_step = std::min(2*present_time_step, target_time_step - time_advanced_so_far);
+                present_time_step = std::min(present_time_step, target_time_step - time_advanced_so_far);
             }
 
         }

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2005-2018, University of Oxford.
+Copyright (c) 2005-2020, University of Oxford.
 All rights reserved.
 
 University of Oxford means the Chancellor, Masters and Scholars of the
@@ -215,7 +215,7 @@ herr_t op_func (hid_t loc_id, const char *name,
      * the Library.
      */
     H5O_info_t infobuf;
-    H5Oget_info_by_name (loc_id, name, &infobuf, H5P_DEFAULT);
+    H5Oget_info_by_name (loc_id, name, &infobuf,  0,H5P_DEFAULT);
     switch (infobuf.type)
     {
 //          case H5O_TYPE_GROUP:
