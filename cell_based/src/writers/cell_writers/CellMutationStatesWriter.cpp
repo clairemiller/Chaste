@@ -50,14 +50,14 @@ double CellMutationStatesWriter<ELEMENT_DIM, SPACE_DIM>::GetCellDataForVtkOutput
 {
     double mutation_state = pCell->GetMutationState()->GetColour();
 
-    CellPropertyCollection collection = pCell->rGetCellPropertyCollection();
-    CellPropertyCollection label_collection = collection.GetProperties<CellLabel>();
+    // CellPropertyCollection collection = pCell->rGetCellPropertyCollection();
+    // CellPropertyCollection label_collection = collection.GetProperties<CellLabel>();
 
-    if (label_collection.GetSize() == 1)
-    {
-        boost::shared_ptr<CellLabel> p_label = boost::static_pointer_cast<CellLabel>(label_collection.GetProperty());
-        mutation_state = p_label->GetColour();
-    }
+    // if (label_collection.GetSize() == 1)
+    // {
+    //     boost::shared_ptr<CellLabel> p_label = boost::static_pointer_cast<CellLabel>(label_collection.GetProperty());
+    //     mutation_state = p_label->GetColour();
+    // }
 
     return mutation_state;
 }
@@ -68,14 +68,14 @@ void CellMutationStatesWriter<ELEMENT_DIM, SPACE_DIM>::VisitCell(CellPtr pCell, 
     double mutation_state = pCell->GetMutationState()->GetColour();
 
     ///\todo split these all off as cell label not mutation states (see #2534)
-    CellPropertyCollection collection = pCell->rGetCellPropertyCollection();
-    CellPropertyCollection label_collection = collection.GetProperties<CellLabel>();
+    // CellPropertyCollection collection = pCell->rGetCellPropertyCollection();
+    // CellPropertyCollection label_collection = collection.GetProperties<CellLabel>();
 
-    if (label_collection.GetSize() == 1)
-    {
-        boost::shared_ptr<CellLabel> p_label = boost::static_pointer_cast<CellLabel>(label_collection.GetProperty());
-        mutation_state = p_label->GetColour();
-    }
+    // if (label_collection.GetSize() == 1)
+    // {
+    //     boost::shared_ptr<CellLabel> p_label = boost::static_pointer_cast<CellLabel>(label_collection.GetProperty());
+    //     mutation_state = p_label->GetColour();
+    // }
 
     *this->mpOutStream << mutation_state << " ";
 }
