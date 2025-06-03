@@ -36,7 +36,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "PottsMesh.hpp"
 #include "RandomNumberGenerator.hpp"
 
-
 template<unsigned DIM>
 PottsMesh<DIM>::PottsMesh(std::vector<Node<DIM>*> nodes,
                           std::vector<PottsElement<DIM>*> pottsElements,

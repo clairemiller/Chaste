@@ -315,7 +315,7 @@ public:
      *
      * @return the index of the new element
      */
-    unsigned DivideElement(PottsElement<DIM>* pElement,
+    virtual unsigned DivideElement(PottsElement<DIM>* pElement,
                            bool placeOriginalElementBelow=false);
 
     /**
